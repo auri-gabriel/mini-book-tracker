@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h2.mb-4 Add a New Book
+
+  form(action="/add", method="POST", class="row g-3")
+    .col-md-6
+      label.form-label(for="title") Title
+      input.form-control(type="text", name="title", id="title", required)
+    .col-md-6
+      label.form-label(for="author") Author
+      input.form-control(type="text", name="author", id="author", required)
+    .col-md-6
+      label.form-label(for="status") Status
+      select.form-select(name="status", id="status")
+        option(value="To Read") To Read
+        option(value="Reading") Reading
+        option(value="Finished") Finished
+    .col-12
+      button.btn.btn-primary(type="submit") Add Book

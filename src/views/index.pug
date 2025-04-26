@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h2.mb-4 My Book List
+
+  if books.length
+    .list-group
+      each book in books
+        a.list-group-item.list-group-item-action(href=`/book/${book.id}`)
+          strong= book.title
+          |  by #{book.author} 
+          span.badge.bg-secondary.float-end= book.status
+  else
+    p.text-muted No books added yet. Go to 
+      a(href="/add") Add Book
+      | .

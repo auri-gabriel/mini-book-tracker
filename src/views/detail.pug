@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h2.mb-3= book.title
+
+  ul.list-group.mb-4
+    li.list-group-item
+      strong Author: 
+      |  #{book.author}
+    li.list-group-item
+      strong Status: 
+      span.badge.bg-info.text-dark= book.status
+
+  a.btn.btn-secondary(href="/") ← Back to List

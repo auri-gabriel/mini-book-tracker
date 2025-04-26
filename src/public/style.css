@@ -1,0 +1,21 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+nav a {
+  margin-right: 1rem;
+}
+
+form input,
+form select {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+}
