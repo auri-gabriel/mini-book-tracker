@@ -6,5 +6,6 @@ router.get('/', bookController.index);
 router.get('/add', bookController.showAddForm);
 router.post('/add', bookController.addBook);
 router.get('/book/:id', bookController.bookDetails);
+router.post('/book/:id/delete', bookController.deleteBook);
 
 module.exports = router;

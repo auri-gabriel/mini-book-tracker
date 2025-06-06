@@ -11,4 +11,7 @@ block content
       strong Status: 
       span.badge.bg-info.text-dark= book.status
 
-  a.btn.btn-secondary(href="/") ← Back to List
+  .d-flex.justify-content-between
+    a.btn.btn-secondary(href="/") ← Back to List
+    form(action=`/book/${book.id}/delete`, method="POST", style="display:inline")
+     button.btn.btn-danger(type="submit") Delete Book

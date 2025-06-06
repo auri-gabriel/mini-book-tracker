@@ -30,3 +30,11 @@ exports.bookDetails = (req, res) => {
     res.render('detail', { title: 'Book Details', book });
   });
 };
+
+exports.deleteBook = (req, res) => {
+  const id = req.params.id;
+  db.run('DELETE FROM books WHERE id = ?', [id], (err) => {
+    if (err) throw err;
+    res.redirect('/');
+  });
+};
